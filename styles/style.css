@@ -1,0 +1,443 @@
+/* Variables */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@300;400;500&display=swap');
+
+:root {
+    --yellow: #FFD15B;
+    --black: #1B1B1B;
+    --gray: #7A7A7A;
+    --light-gray: #C6C6C6;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background: var(--light-gray);
+}
+
+/* Header */
+header#entete {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 664px;
+    padding: 2%;
+    background: rgba(27, 27, 27, 0.3);
+}
+
+header#entete::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: center/cover no-repeat url("../assets/header-bg.png");
+    z-index: -1;
+}
+
+header#entete .logo {
+    position: absolute;
+    top: 69px;
+    left: 51px;
+}
+
+header#entete h1 {
+    font-size: 44px;
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    text-wrap: balance;
+    letter-spacing: 4px;
+    color: var(--yellow);
+    max-width: 890px;
+    margin: 30px;
+}
+
+header#entete .searchbar {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 954px;
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 11px;
+}
+
+header#entete .searchbar #search {
+    width: 100%;
+    height: 52px;
+    border: none;
+    padding-left: 10px;
+}
+
+header#entete .searchbar #btn-search {
+    width: 51px;
+    height: 52px;
+    background-color: var(--black);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+header#entete .searchbar #btn-search:hover,
+header#entete .searchbar #btn-search:focus {
+    background-color: var(--yellow);
+}
+
+header#entete .searchbar #btn-search:hover img,
+header#entete .searchbar #btn-search:focus img {
+    filter: brightness(0);
+}
+
+header#entete .search-suggest {
+    background-color: white;
+    width: 100%;
+    max-width: 890px;
+}
+
+header#entete .search-suggest ul {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0;
+}
+
+header#entete .search-suggest ul li {
+    box-sizing: border-box;
+    padding: 20px 16px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+header#entete .search-suggest ul li:hover {
+    background-color: var(--yellow);
+}
+
+/* Main */
+main {
+    padding: 21px 102px;
+}
+
+main header#main {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    overflow: visible;
+    z-index: 2;
+}
+
+main header#main .filter-contain {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: start;
+    gap: 66px;
+    z-index: 2;
+    height: 60PX;
+}
+
+main header#main .filter-contain .filter {
+    background-color: var(--white);
+    border-radius: 11px;
+    padding: 0;
+    width: 195px;
+    height: fit-content;
+    max-height: 315px;
+    padding: 17px 16px;
+    overflow: hidden;
+}
+
+main header#main .filter-contain .filter:focus {
+    border: 2px solid var(--black);
+}
+
+main header#main .filter .filter-select {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 63px;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    background: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+main header#main .filter .filter-click img {
+    transform: rotate(180deg);
+}
+
+main header#main .filter .filter-research {
+    display: none;
+    flex-flow: column nowrap;
+    align-items: start;
+    justify-content: space-around;
+}
+
+main header#main .filter .filter-research .searchbar {
+    padding: 8px;
+    border: 1px solid var(--light-gray);
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 36px;
+    width: 100%;
+    max-width: 160px;
+    margin: 14px 0;
+}
+
+main header#main .filter .filter-research .searchbar .filter-search {
+    border: none;
+    width: calc(100% - 21px);
+}
+
+main header#main .filter .filter-research .searchbar .btn-search {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+main header#main .filter .filter-research .searchbar .btn-search img {
+    width: 13.5px;
+    height: 14px;
+    filter: brightness(0);
+}
+
+main header#main .filter .filter-research ul {
+    width: 100%;
+    margin: 0 -16px;
+    padding: 0px 16px;
+    max-height: 250px;
+    overflow-y: scroll;
+}
+
+main header#main .filter .filter-research li {
+    width: 100%;
+    margin: 0px -16px;
+    padding: 9px 16px;
+    cursor: pointer;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+main header#main .filter .filter-research li img {
+    display: none;
+}
+
+main header#main .filter .filter-research li.select {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 900;
+    background-color: var(--yellow);
+}
+
+main header#main .filter .filter-research li.select img {
+    display: block;
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    transition: all .2s ease-in-out;
+}
+
+main header#main .filter .filter-research li.select img:hover {
+    transform: scale(1.2);
+}
+
+main header#main .filter .filter-research li:hover {
+    background-color: var(--yellow);
+}
+
+main header#main .total-recette {
+    min-width: 100px;
+    padding: 0 0.75rem;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+main header#main .total-recette .total {
+    font-family: 'Anton', sans-serif;
+    font-size: 21px;
+}
+
+main header#main .tag-container {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    padding: 0;
+}
+
+main header#main .tag-container li {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background-color: var(--yellow);
+    box-sizing: border-box;
+    min-width: 141px;
+    width: fit-content;
+    max-height: 53px;
+    border-radius: 10px;
+    padding: 18px 17px;
+}
+
+/** Cards **/
+section {
+    height: fit-content;
+}
+
+.filter-card {
+    display: none;
+}
+
+.cards-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 48px;
+    min-height: 40vh;
+}
+
+.card {
+    display: block;
+    position: relative;
+    background: var(--white);
+    height: 731px;
+    min-width: 380px;
+    width: calc((100% - 96px) / 3);
+    border-radius: 21px;
+    overflow: hidden;
+    box-shadow: 0 4px 34px rgba(0, 0, 0, 0.04);
+}
+
+.card .time {
+    position: absolute;
+    top: 21px;
+    right: 22px;
+    font-size: 12px;
+    background-color: var(--yellow);
+    border-radius: 14px;
+    padding: 5px 15px;
+}
+
+.card img {
+    width: 100%;
+    height: 253px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.card h2,
+.card .recette-container,
+.card .ingredient-container {
+    padding: 0 25px;
+}
+
+.card h2 {
+    margin-top: 32px;
+    margin-bottom: 29px;
+    font-family: 'Anton', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--black);
+}
+
+.card .recette-container h3,
+.card .ingredient-container h3 {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+
+.card .recette-container {
+    margin-bottom: 32px;
+}
+
+.card .recette-container p {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--black);
+}
+
+.ingredient-container {
+    width: 100%;
+}
+
+.ingredient-container .ingredient,
+.ingredient-container .quantite {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.ingredient-container .ingredient {
+    color: var(--black);
+    font-weight: 500;
+}
+
+.ingredient-container .quantite {
+    color: var(--gray);
+    font-weight: 400;
+}
+
+.list-ingredient {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 21px;
+    width: 100%;
+}
+
+.list-ingredient li {
+    width: calc((100% - 42px) / 2);
+    padding: 0;
+}
+
+.list-ingredient li ul,
+.list-ingredient li ul li {
+    width: 100%;
+}

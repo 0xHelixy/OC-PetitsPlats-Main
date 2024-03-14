@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/style.css" rel="stylesheet">
+    <title>Petitplats</title>
+</head>
+
+<body>
+    <header id="entete">
+        <img src="assets/logo.png" alt="Petitplats, site de recette" class="logo">
+        <h1>CHERCHEZ PARMI PLUS DE 1500 RECETTES DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES</h1>
+        <div class="searchbar">
+            <input type="search" name="search" id="search" placeholder="Rechercher une recette, un ingrédient, ...">
+            <button id="btn-search">
+                <img src="assets/search-icon.png" alt="loupe de recherche">
+            </button>
+
+        </div>
+    </header>
+    <main>
+        <header id="main">
+            <div class="filter-contain">
+                <div class="filter filter-ingredient">
+                    <button class="filter-select">
+                        <span>Ingrédient</span>
+                        <img src="./assets/arrow-icon.png" alt="fleche de sélection">
+                    </button>
+                    <div class="filter-research">
+                        <div class="searchbar">
+                            <input type="search" name="ingredient-search" id="ingredient-search" class="filter-search">
+                            <button class="btn-search" type="submit" id="ingredient-search-btn">
+                                <img src="assets/search-icon.png" alt="loupe de recherche">
+                            </button>
+                        </div>
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter filter-appareil">
+                    <button class="filter-select">
+                        <span>Appareil</span>
+                        <img src="./assets/arrow-icon.png" alt="fleche de sélection">
+                    </button>
+                    <div class="filter-research">
+                        <div class="searchbar">
+                            <input type="search" name="appareil-search" id="appareil-search" class="filter-search">
+                            <button class="btn-search">
+                                <img src="assets/search-icon.png" alt="loupe de recherche">
+                            </button>
+                        </div>
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter filter-ustensil">
+                    <button class="filter-select">
+                        <span>Ustensils</span>
+                        <img src="./assets/arrow-icon.png" alt="fleche de sélection">
+                    </button>
+                    <div class="filter-research">
+                        <div class="searchbar">
+                            <input type="search" name="ustensil-search" id="ustensil-search" class="filter-search">
+                            <button class="btn-search">
+                                <img src="assets/search-icon.png" alt="loupe de recherche">
+                            </button>
+                        </div>
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="total-recette">
+                <p class="total">0 recette</p>
+            </div>
+            <ul class="tag-container">
+            </ul>
+        </header>
+        <section>
+            <ul class="cards-container">
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
